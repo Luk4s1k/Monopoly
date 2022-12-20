@@ -1,5 +1,6 @@
 #include "RewardField.h"
 
- void RewardField::doAction() {
+ void RewardField::doAction()
+ {
     std::cout << "RewardField doAction called " << std::endl;
  }

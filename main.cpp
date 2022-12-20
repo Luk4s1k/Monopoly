@@ -2,7 +2,8 @@
 #include <memory>
 #include "StartField.h"
 
-int main () {
+int main () 
+{
    Board *game = new Board();
    game->play();
 // StartField sf;

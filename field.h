@@ -1,7 +1,8 @@
 #pragma once
 #include <iostream>
 
-class Field {
+class Field 
+{
 public:
     Field();
     virtual void doAction() = 0;

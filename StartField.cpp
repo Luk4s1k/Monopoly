@@ -3,6 +3,7 @@
 StartField::StartField(){}
 
 
- void StartField::doAction() {
+ void StartField::doAction()
+ {
     std::cout << "StartField doAction called " << std::endl;
  }

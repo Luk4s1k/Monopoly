@@ -2,7 +2,8 @@
 #include <string>
 #include "field.h"
 
-class Player {
+class Player
+{
 private:
     std::string name;
     int tileNumber = 0;

@@ -4,8 +4,8 @@
 #include <vector>
 #include <memory>
 
-// static const int TILE_NUMBER = 40;
-class Board{
+class Board
+{
 private:
     std::vector<std::unique_ptr<Field>> board; 
     std::vector<Player> players;
@@ -15,5 +15,6 @@ public:
     void movePlayer(Player player, int tiles);
     void activateField(Field *field, Player player);
     void play();
+    void addPlayer(std::string playerName);
     static int throwDice();
 };
