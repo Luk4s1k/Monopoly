@@ -1,11 +1,12 @@
 #pragma once
 #include <iostream>
+#include "Player.h"
 
 class Field 
 {
 public:
     Field();
-    virtual void doAction() = 0;
-    int getTileNumber();
+    virtual void onPass(Player &player) = 0;
+    virtual void onStop(Player &player) = 0;
 
 };

@@ -3,5 +3,5 @@
 
 class RewardField : public Field
 {
-    virtual void doAction() override;
+    virtual void doAction(Player &player) override;
 };

@@ -1,10 +1,7 @@
-#pragma once
 #include "field.h"
 
-class StartField : public Field
+class PenaltyField : public Field
 {
-public:
-    StartField();
     virtual void onPass(Player &player) override;
     virtual void onStop(Player &player) override;
 };

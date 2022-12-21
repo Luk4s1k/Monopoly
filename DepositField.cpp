@@ -2,8 +2,9 @@
 
 //  void RewardField::doAction(Player &player)
 //  {
-//    int newBalance = player.getMoney() + 100;
+//    int newBalance = player.getMoney() - 200;
 //    player.setMoney(newBalance);
+//    player.increaseDeposit(200);
 //    std::cout << player.getName() << " GOT " << 100 << " coins "  << std::endl;
 //  }
 

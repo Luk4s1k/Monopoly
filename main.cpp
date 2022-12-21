@@ -1,12 +1,11 @@
 #include "Board.h"
-#include <memory>
 #include "StartField.h"
+#include "Game.h"
+#include <memory>
 
 int main () 
 {
-   Board *game = new Board();
-   game->play();
-// StartField sf;
-// sf.doAction();
+   Game *game = new Game();
+   game->play(5);
     return 0;
 }
