@@ -10,12 +10,11 @@ private:
     int boardSize = CLASSIC_BOARD_SIZE;
     std::vector<std::unique_ptr<Field>> board; 
     
-    void activateOnPass(Player &player);
+    void activateOnPass(Player &player,int moves);
     void activateOnStop(Player &player);
     void grantStartBonus(Player &player);
     void init();
 public:
     Board();
-    void movePlayer(Player &player, int tiles);
-    static int throwDice();
+    void performMove(Player &player, int tiles);
 };

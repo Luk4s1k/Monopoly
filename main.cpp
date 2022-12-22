@@ -6,6 +6,8 @@
 int main () 
 {
    Game *game = new Game();
-   game->play(5);
+   game->addUserPlayer("Alex");
+   game->addGreedyPlayer("Jojo");
+   game->play(7);
     return 0;
 }

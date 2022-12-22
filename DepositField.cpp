@@ -1,21 +1,15 @@
-#include "RewardField.h"
+#include "DepositField.h"
 
-//  void RewardField::doAction(Player &player)
-//  {
-//    int newBalance = player.getMoney() - 200;
-//    player.setMoney(newBalance);
-//    player.increaseDeposit(200);
-//    std::cout << player.getName() << " GOT " << 100 << " coins "  << std::endl;
-//  }
-
-void RewardField::onPass(Player &player)
+void DepositField::onPass(Player &player)
  {
-   int newBalance = player.getMoney() + 400; // change to add money
-   player.setMoney(newBalance);
-   std::cout << player.getName() << " START POINT GOT " << 400 << " coins "  << std::endl;
+   player.subtractMoney(20);
+   deposit += 20;
+   std::cout << " ### Deposit taken from " << player.getName() << std::endl;
  }
 
-void RewardField::onStop(Player &player)
+void DepositField::onStop(Player &player)
 {
-   onPass(player);
+   player.increaseMoney(deposit);
+   deposit = 0;
+   std::cout << " ### Deposit given to " << player.getName() << std::endl;
 }

@@ -3,5 +3,8 @@
 
 class RewardField : public Field
 {
-    virtual void doAction(Player &player) override;
+    virtual void onPass(Player &player) override;
+    virtual void onStop(Player &player) override;
+public:
+    RewardField();
 };

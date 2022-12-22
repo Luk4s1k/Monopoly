@@ -2,6 +2,8 @@
 
 Player::Player(std::string name): name(name){}
 
+
+
 void Player::setTileNumber(const int tile)
 {
     tileNumber = tile;
@@ -11,16 +13,20 @@ void Player::setTileNumber(const int tile)
 void Player::increaseMoney(int amount)
 {
     money += amount;
-    std::cout << " --- Balance increased " << money << std::endl;
+    // std::cout << " --- Balance increased " << money << std::endl;
 }
 void Player::subtractMoney(int amount)
 {
     money -= amount;
-    std::cout << " --- Balance decreased " << money << std::endl;
 }
 
 void Player::move(int tiles)
 {
-    tileNumber += tiles;
-    std::cout << " --- Player moved " << money << std::endl;
+    tileNumber = (tileNumber + tiles)%40; // to be changed to const
+    //std::cout << " --- Player "<<  name << " moved to " << tileNumber << std::endl;
+}
+
+bool Player::makeDecision()
+{
+    return true;
 }

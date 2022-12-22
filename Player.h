@@ -4,9 +4,10 @@
 
 class Player
 {
-private:
+protected:
 
     std::string name;
+
     int tileNumber = 0;
     int money = 3000;
 
@@ -22,5 +23,7 @@ public:
 
     std::string getName() {return name;};
     int getTileNumber(){ return tileNumber;};
+    int getMoney(){return money;};
+    virtual bool makeDecision();
 
 };
